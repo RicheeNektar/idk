@@ -40,6 +40,7 @@ import me.pogodaanton.corbetplugin.commands.SunCmd;
 import me.pogodaanton.corbetplugin.commands.TpaCmd;
 import me.pogodaanton.corbetplugin.commands.TpacceptCmd;
 import me.pogodaanton.corbetplugin.commands.TpdenyCmd;
+import me.pogodaanton.corbetplugin.commands.dayNite;
 import me.pogodaanton.corbetplugin.configs.spawn;
 import me.pogodaanton.corbetplugin.listeners.AsyncChatListener;
 import me.pogodaanton.corbetplugin.listeners.CommandPreprocessListener;
@@ -86,6 +87,9 @@ public class corbetplugin extends JavaPlugin {
 		getCommand("kickall").setExecutor(new KickallCmd());
 		getCommand("msg").setExecutor(new MsgCmd());
 		getCommand("cc").setExecutor(new BaseCmd());
+		dayNite n = new dayNite();
+		getCommand("day").setExecutor(n);
+		getCommand("night").setExecutor(n);
 		
 		Bukkit.getPluginManager().registerEvents(new DungeonChestListener(), this);
 		Bukkit.getPluginManager().registerEvents(new JumpListener(), this);

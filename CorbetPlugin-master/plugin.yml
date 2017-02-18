@@ -56,6 +56,10 @@ commands:
       aliases: [pm, privat, private, whisper, r]
     cc:
       description: Allgemeiner Command.
+    day:
+      description: Setzt Zeit auf Tag.
+    night:
+      description: Setzt Zeit auf Nacht.
 permissions:
     cc.*:
       description: Gibt dir alle CP-Commands.
@@ -84,6 +88,9 @@ permissions:
         default: op
     cc.test:
         description: Gibt Erlaubnis für Testcommands.
+        default: op
+    cc.time:
+        description: Hiermit kann man die Zeit aendern.
         default: op
     cc.jumpadmin:
         description: Gibt Erlaubnis für weitere Admin-Commands beim Jump-plugin.
