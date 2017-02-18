@@ -1,0 +1,102 @@
+name: CorbetPlugin
+main: me.pogodaanton.corbetplugin.corbetplugin
+version: 1.6.2
+description: Der offizielle Plugin für CorbetCraft
+softdepend: [SkyWarsReloaded2, SkyWarsReloaded, Kickdown, BedwarsRel, PermissionsEx]
+commands:
+    tpa:
+      description: Schickt dem anderen eine Teleportanfrage.
+    tpaccept:
+      description: Akzeptiert eine Teleportanfrage.
+    tpdeny:
+      description: Verweigert eine Teleportanfrage.
+    gm:
+      description: Ändert dein Gamemode.
+    ad:
+      description: Sendet Werbung im Chat.
+      aliases: [werbung, reklam]
+    hilfe:
+      description: Sendet Hilfe im Chat.
+      aliases: [q, frage]
+    rain:
+      description: Macht Regen in der aktuellen Welt.
+    sun:
+      description: Macht den Regen weg in der aktuellen Welt.
+    sethome:
+      description: Setzt deinen Home.
+      aliases: createhome
+    delhome:
+      description: Löscht deinen Home.
+      aliases: [remhome, removehome]
+    clearhomes:
+      description: Löscht alle deiner Homes.
+      aliases: [clhomes, removehomes, delhomes, remhomes]
+    home:
+      description: Teleportiert zu deinem Home.
+      aliases: tphome
+    lobby:
+      description: Teleportiert dich zum Spielelobby, wenn du in einem Spiel bist.
+      aliases: [l, hub, leave]
+    spawn:
+      description: Teleporitert dich zum Spawn.
+      aliasses: [spwn, spn]
+    setspawn:
+      description: Speichert den Spawnpunkt.
+    jump:
+      description: Command für Jump'n Runs.
+      aliases: [jumper, ju, parkour]
+    broadcast:
+      description: Sendet Nachrichten an allen auf dem Server.
+      aliases: bc
+    kickall:
+      description: Kickt alle Spieler.
+      aliases: [kicka,allkick,allk]
+    msg:
+      description: Sendet eine private Nachricht.
+      aliases: [pm, privat, private, whisper, r]
+    cc:
+      description: Allgemeiner Command.
+permissions:
+    cc.*:
+      description: Gibt dir alle CP-Commands.
+      children:
+        cc.gm: true
+        cc.weather: true
+        cc.chest: true
+        cc.home: true
+        cc.test: true
+        cc.jumpadmin: true
+        cc.broadcast: true
+        cc.maydisabled: true
+        cc.kickall: true
+        cc.setspawn: true
+    cc.gm:
+        description: Ändert dein Gamemode.
+        default: op
+    cc.weather:
+        description: Ändert das Wetter.
+        default: op
+    cc.chest:
+        description: Darf für immer Dungeon-Chests öffnen
+        default: op
+    cc.home:
+        description: Kann eigene Homes erstellen.
+        default: op
+    cc.test:
+        description: Gibt Erlaubnis für Testcommands.
+        default: op
+    cc.jumpadmin:
+        description: Gibt Erlaubnis für weitere Admin-Commands beim Jump-plugin.
+        default: op
+    cc.broadcast:
+        description: Gibt Erlaubnis für den Broadcast command.
+        default: op
+    cc.maydisabled:
+        description: Gibt Benutzrechte für ausgeschaltete Commands.
+        default: op
+    cc.kickall:
+        description: Darf alle Spieler gleichzeitig kicken.
+        default: op
+    cc.setspawn:
+        description: Darf einen Spawn setzen.
+        default: op
